@@ -1,0 +1,17 @@
+{
+  "name": "taskmatrix-backend",
+  "version": "0.2.0",
+  "description": "TaskMatrix backend foundation, User schema, and auth registration/login endpoints (Sprint 14 - Track B - Phase 2A)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "verify:user": "node src/scripts/verifyUserModel.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5"
+  }
+}

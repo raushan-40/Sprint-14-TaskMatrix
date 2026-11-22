@@ -406,3 +406,15 @@ This document records the intended planning workflow; the final checklist must b
 - Created `backend/src/controllers/authController.js` implementing `register` (`201` on new user, `409` on duplicate email, `400` on invalid/missing input) and `login` (`200` on valid credentials, `401` with generic message on invalid credentials, `400` on missing fields), explicitly selecting `+password` for `comparePassword` and signing JWTs via `jsonwebtoken`.
 - Created `backend/src/routes/authRoutes.js` and `backend/src/server.js` with `dotenv` loading, `express.json()`, and `/api/auth` mounting.
 - Live HTTP and MongoDB endpoint tests were not executed in this environment because shell and database execution are unavailable here.
+
+## Sprint 14 — Track B — Phase 2B: React Authentication Forms and JWT Client Integration
+
+### Prompt
+# Sprint 14 — Track B — Phase 2B
+# React Authentication Forms and JWT Client Integration
+(Connect a React + Vite frontend to POST /api/auth/register and POST /api/auth/login using VITE_API_URL, persist JWT under "token" in localStorage with safe user session state, support /register, /login, and /dashboard routes with logout navigation, enable CORS for http://localhost:5173 on the Express backend, and stay strictly within Phase 2B scope without JWT middleware, full dashboard, or CRUD features.)
+
+### Factual Description of Frontend and Backend Changes
+- Created `frontend/` React + Vite project with `.env.example`, `.gitignore`, `index.html`, `vite.config.js`, `package.json`, `src/services/api.js`, `src/context/AuthContext.jsx`, `src/pages/RegisterPage.jsx`, `src/pages/LoginPage.jsx`, `src/pages/DashboardPage.jsx`, `src/App.jsx`, `src/main.jsx`, and `src/index.css`.
+- Added `cors` to `backend/package.json` and configured `cors` in `backend/src/server.js` to allow `http://localhost:5173` (or `process.env.CLIENT_ORIGIN`).
+- Browser, network, and `localStorage` verification steps were not executed in this environment due to lack of local shell/browser access here.
